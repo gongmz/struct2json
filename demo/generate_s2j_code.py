@@ -2,7 +2,7 @@
 import re
 struct_txt = "struct_defination.txt"
 with open(struct_txt,"r") as f:
-    lines = f.readlines()
+    lines = f.readlines() # 读取文件的所有行，并将每一行作为一个字符串元素存储在一个列表中
 #注意:结构体后面不能加任何注释，仅仅是结构体的一般定义就好，不然会解析出问题
 #将文件中定义的结构体定义由多行转换为一行，方便后续使用字符串进行相关的处理
 struct_str = ""
