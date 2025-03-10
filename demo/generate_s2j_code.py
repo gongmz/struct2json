@@ -74,8 +74,8 @@ for item in struct_str_split_list:
                 s2j_code_str_concat = s2j_code_str_concat + "s2j_json_set_array_element(json_obj_, struct_obj_, int, "+ para_name + ","+ array_para_name_size+");\n\t"
                 j2s_code_str_concat = j2s_code_str_concat +"s2j_struct_get_array_element(struct_obj_,json_obj, int, "+para_name + ");\n\t"
             else:
-                s2j_code_str_concat = s2j_code_str_concat + "s2j_json_set_basic_element(json_obj_, struct_obj_, int, "+para_name+");\n\t"
-                j2s_code_str_concat = j2s_code_str_concat + "s2j_struct_get_basic_element(struct_obj_,json_obj, int, "+para_name+");\n\t"
+                s2j_code_str_concat = s2j_code_str_concat + "s2j_json_set_basic_element(json_obj_, struct_obj_, string, "+para_name+");\n\t"
+                j2s_code_str_concat = j2s_code_str_concat + "s2j_struct_get_basic_element(struct_obj_,json_obj, string, "+para_name+");\n\t"
         elif para_type.find("enum")!=-1 or para_type.find("CbT")!=-1:  # enum或函数指针（根据实际命名规范识别）
             #print(para_type)
             if "[" in para_name:
